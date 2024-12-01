@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KNN Prediction</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>K-Nearest Neighbors (KNN) Prediction</h1>
+
+    <!-- Random Dataset Generator -->
+    <div>
+      <h3>Generate Random Dataset</h3>
+      <label>
+        Enter Range of Data:
+        <input type="number" id="range-input" />
+      </label>
+      <label>
+        Enter Number of Points per Class:
+        <input type="number" id="size-input" />
+      </label>
+      <button id="generate-dataset-btn">Generate Dataset</button>
+    </div>
+
+    <!-- Display Generated Dataset -->
+    <div id="dataset-display" style="display: none;">
+      <h3>Generated Data Points</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>X</th>
+            <th>Y</th>
+            <th>Class</th>
+          </tr>
+        </thead>
+        <tbody id="dataset-table-body"></tbody>
+      </table>
+    </div>
+
+    <!-- Submit Prediction -->
+    <div>
+      <h3>Prediction Section</h3>
+      <label>Enter K:</label>
+      <input type="number" id="k-input" />
+      <br />
+      <label>Enter New Data Point:</label>
+      <input type="number" id="new-point-x" placeholder="X" />
+      <input type="number" id="new-point-y" placeholder="Y" />
+      <br />
+      <button id="predict-btn">Predict</button>
+    </div>
+    <h3 id="predicted-class-display">Predicted Class: </h3>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
